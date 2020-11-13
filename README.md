@@ -2,14 +2,18 @@
 
 A new flutter plugin project.
 
-## Getting Started
+## Check if device supports
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+```dart
+// Currently only support windows
+bool isSupported = await DesktopLocalAuth.isSupported;
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Request authorization
 
+```dart
+// caption and message is required
+String caption = "Caption Windows Security";
+String message = "The Application is trying to show your password. Please enter your Windows password to allow this";
+bool isValidUser = await DesktopLocalAuth.isValidUser(caption, message);
+```

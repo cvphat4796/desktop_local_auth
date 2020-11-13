@@ -21,6 +21,14 @@ class DesktopLocalAuth {
   }
 
   static Future<bool> isValidUser(String caption, String message) async {
+    if (caption?.isEmpty ?? true) {
+      throw ("Caption is required");
+    }
+
+    if (message?.isEmpty ?? true) {
+      throw ("Message is required");
+    }
+
     final bool isVerified =
         await _channel.invokeMethod('verifyUser', [caption, message]);
     return isVerified;
