@@ -1,8 +1,8 @@
 name: desktop_local_auth
-description: A new flutter plugin project.
+description: Flutter plugin for ask user authentication in windows.
 version: 0.0.1
-author:
-homepage:
+author: 'Vinh Phat'
+homepage: https://github.com/cvphat4796/desktop_local_auth
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
