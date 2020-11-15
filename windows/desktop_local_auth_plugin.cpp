@@ -80,7 +80,7 @@ bool verifyUser(std::string strCaption, std::string strMessage) {
             strDomain = bufferDomain.data();
           }
 
-          if (::LogonUserW(strUsername.c_str(), strDomain.c_str(), bufferPassword.data(), LOGON32_LOGON_INTERACTIVE, LOGON32_PROVIDER_DEFAULT, &hToken))
+          if (::LogonUserW(strUsername.c_str(), strDomain.c_str(), bufferPassword.data(), LOGON32_LOGON_UNLOCK, LOGON32_PROVIDER_DEFAULT, &hToken))
           {
             isValid = TRUE;
             continueAsk = FALSE;
